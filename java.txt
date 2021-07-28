@@ -1,0 +1,33 @@
+
+7.14
+collection 集合  map图
+
+区别  collecton是以线性链表的形式容纳对象元素的集合  map是以键值对的形式存储（x）
+区别  collecton是存储元素的集合 list是以线性列表的存储方式  map是以键值对的形式存储（?）
+
+
+
+collection 分为  set  list  queue
+map的实现类有  hashmap  treemap
+set 的实现类有  treeset  hashset
+list的实现类有  hashList arrylist  linklist
+
+list 和 set的区别 在于
+list 存储的是有序的  不唯一的元素集合。所以 查找元素方便，但是增删效率低
+反之  set 存储的是无序的  唯一的元素集合。所以查找效率低下，但是增删效率高
+
+list的实现类  arrylist和linklist 都是list的实现类
+两者都是以线性链表的形式存储元素对象
+
+区别在于使用场景 
+arrylist适用于频繁访问集合中的某一个元素，需要对集合的末尾进行反复的修改
+linklist适用于访问集合中全部元素  需要对集合的  头末尾 中间进行反复修改（x）
+linklist适用于循环迭代访问列表中的某些元素  需要对集合的  头末尾 中间进行反复修改（?）
+
+
+
+7.15
+hashset/treeest
+hashset 有时候会出现正向排序 只因为输入的数据太小了 导致计算的hashcode值＜16 。当数值＞16之后 就会恢复正常  细究起来是扰乱函数和加载因子的作用还有数组的扩容机制存在，数组的默认长度为16 
+list的排序 主要靠collections接口的sort方法进行排序 还有实现comparable 接口等方法  逆向排序 则使用 c.sort(list,resversorder)
+set的排序  hashset的排序 由 hashset转到treeset   treeset靠实现compartor接口或者实现comparable接口 
